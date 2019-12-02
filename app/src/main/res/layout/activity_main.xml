@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:weightSum="1"
+    tools:context="com.shemy.colormixer.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:background="#000000"
+        android:id="@+id/test"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:layout_weight="0.5" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_weight="0.01"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="0,0,0"
+            android:textColor="#fc1778"
+            android:id="@+id/RGB"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:layout_weight="0.47" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="#000000"
+            android:textColor="#007EFF"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:id="@+id/HEX"
+            android:layout_weight="0.47" />
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_weight="0.5">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:weightSum="12"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/left_black_24dp"
+            android:background="@drawable/round_button_red"
+            android:tint="#FF0000"
+            android:onClick="DecrementR"
+            android:layout_weight="2"/>
+
+        <SeekBar
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/RB"
+            android:foregroundTint="#ea5454"
+            android:max="255"
+            android:progress="0"
+            android:layout_weight="8"
+            android:progressBackgroundTint="#ff0000"
+            android:progressTint="#ff0000" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/right_black_24dp"
+            android:background="@drawable/round_button_red"
+            android:tint="#FF0000"
+            android:onClick="IncrementR"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:weightSum="12"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/left_black_24dp"
+            android:background="@drawable/round_button_green"
+            android:tint="#00FF00"
+            android:onClick="DecrementG"
+            android:layout_weight="2"/>
+
+        <SeekBar
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/GB"
+            android:max="255"
+            android:layout_weight="8"
+            android:progressBackgroundTint="#00ff00"
+            android:progressTint="#00ff00" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/right_black_24dp"
+            android:background="@drawable/round_button_green"
+            android:tint="#00FF00"
+            android:onClick="IncrementG"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:weightSum="12"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/left_black_24dp"
+            android:background="@drawable/round_button_blue"
+            android:tint="#0000FF"
+            android:onClick="DecrementB"
+            android:layout_weight="2"/>
+
+        <SeekBar
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/BB"
+            android:layout_gravity="center_horizontal"
+            android:max="255"
+            android:layout_weight="8"
+            android:progressTint="#0000ff"
+            android:progressBackgroundTint="#0000ff" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/right_black_24dp"
+            android:background="@drawable/round_button_blue"
+            android:tint="#0000FF"
+            android:onClick="IncrementB"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+</LinearLayout>
